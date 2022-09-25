@@ -3,8 +3,11 @@ import UAuth from "@uauth/js"
 import { Button } from "react-bootstrap"
 
 const uauth = new UAuth({
-    clientID: "ca047f44-91d0-42be-98b1-45557369cc19",
-    redirectUri: "http://localhost:3000"
+    
+    clientID: "3b1445ca-439f-4d97-9059-3b62b0e9f523",
+    redirectUri: "https://smartran.vercel.app/",
+
+  
 })
 
 function UnstoppableDomain() {
