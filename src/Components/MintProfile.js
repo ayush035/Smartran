@@ -3,8 +3,8 @@
 /* eslint-disable no-shadow */
 import React, { useState } from "react";
 import { NFTStorage } from "nft.storage";
-import { ethers } from "ethers";
-import Web3Modal from "web3modal";
+// import { ethers } from "ethers";
+// import Web3Modal from "web3modal";
 // import NFTMarketplace from "../utils/NFTMarketplace.json";
 // import { marketplaceAddress } from "../../config";
 
