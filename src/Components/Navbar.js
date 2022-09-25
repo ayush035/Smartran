@@ -1,5 +1,4 @@
 import React from 'react'
-import smartran from '../Source/smartran.png'
 import { Link } from "react-router-dom";
 import UnstoppableDomain from './UnstoppableDomain'
 export default function Navbar (){
@@ -18,10 +17,10 @@ export default function Navbar (){
           <a className="nav-link active" aria-current="page" href ='./'><font color ='white' size="4" face ="Verdana">Dashboard</font></a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href ="/Admin"><font color ='white' size="4" face ="Verdana">Admin</font></a>
+          <a className="nav-link" href ="/admin"><font color ='white' size="4" face ="Verdana">Admin</font></a>
         </li>
         <li>
-          <a className="nav-link" href="/Client"><font color ='white' size="4" face ="Verdana">Client</font></a>
+          <a className="nav-link" href="/client"><font color ='white' size="4" face ="Verdana">Client</font></a>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false"><font color ='white' size="4" face ="Verdana">
