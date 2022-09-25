@@ -77,7 +77,7 @@ export default function MintNFT() {
                             <div className="font-bold text-2xl">
                               <font color="white" size="4" face="Verdana">
                                 {" "}
-                                Mint Pension Approval NFTs
+                                Mint Money Streaming NFTs
                               </font>
                             </div>
                             <div className="flex flex-col mt-8">
