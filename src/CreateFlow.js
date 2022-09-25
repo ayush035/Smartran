@@ -75,7 +75,7 @@ export const CreateFlow = () => {
 
   function CreateButton({ isLoading, children, ...props }) {
     return (
-      <Button variant="success" className="button" {...props}>
+      <Button variant="none" className="button" {...props}>
         {isButtonLoading ? <Spinner animation="border" /> : children}
       </Button>
     );
@@ -96,51 +96,54 @@ export const CreateFlow = () => {
 
   return (
     <div>
-      <h2>
-        <font color="white">Create a Flow</font>
-      </h2>
-      <Form>
-        <FormGroup className="mb-3">
-          <FormControl
-            name="recipient"
-            value={recipient}
-            onChange={handleRecipientChange}
-            placeholder="Enter your Ethereum address"
-          ></FormControl>
-        </FormGroup>
-        <FormGroup className="mb-3">
-          <FormControl
-            name="flowRate"
-            value={flowRate}
-            onChange={handleFlowRateChange}
-            placeholder="Enter a flowRate in wei/second"
-          ></FormControl>
-        </FormGroup>
-        <CreateButton
-          onClick={() => {
-            setIsButtonLoading(true);
-            createNewFlow(recipient, flowRate);
-            setTimeout(() => {
-              setIsButtonLoading(false);
-            }, 1000);
-          }}
-        >
-          Click to Create Your Stream
-        </CreateButton>
-      </Form>
+      <font align="center" color="white">
+        <h2>
+          {/* <font color="white">Add a Client</font> */}
+        </h2>
+        <Form>
+          <FormGroup className="mb-3">
+            <FormControl
+              name="recipient"
+              value={recipient}
+              onChange={handleRecipientChange}
+              placeholder="Enter Client's Ethereum address"
+            ></FormControl>
+          </FormGroup>
+          <FormGroup className="mb-3">
+            <FormControl
+              name="flowRate"
+              value={flowRate}
+              onChange={handleFlowRateChange}
+              placeholder="Enter a flowRate in wei/second"
+            ></FormControl>
+          </FormGroup>
+          <CreateButton
+            className="btn btn-outline-light"
+            onClick={() => {
+              setIsButtonLoading(true);
+              createNewFlow(recipient, flowRate);
+              setTimeout(() => {
+                setIsButtonLoading(false);
+              }, 1000);
+            }}
+          >
+            Add a Client
+          </CreateButton>
+        </Form>
 
-      <div className="description">
-        {/* <p>
+        <div className="description">
+          {/* <p>
           Go to the CreateFlow.js component and look at the <b>CreateFlow() </b>
           function to see under the hood
         </p> */}
-        <div className="calculation">
-          <p>Your flow will be equal to:</p>
-          <p>
-            <b>${flowRateDisplay !== " " ? flowRateDisplay : 0}</b> DAIx/month
-          </p>
+          <div className="calculation">
+            <p>Your flow will be equal to:</p>
+            <p>
+              <b>${flowRateDisplay !== " " ? flowRateDisplay : 0}</b> DAIx/month
+            </p>
+          </div>
         </div>
-      </div>
+      </font>
     </div>
   );
 };

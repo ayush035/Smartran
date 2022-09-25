@@ -9,7 +9,7 @@ import { NFTStorage } from "nft.storage";
 // import { marketplaceAddress } from "../../config";
 
 // eslint-disable-next-line max-len
-const APIKEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDA4Zjc4ODAwMkUzZDAwNEIxMDI3NTFGMUQ0OTJlNmI1NjNFODE3NmMiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY1MzA1NjE4NzM4MCwibmFtZSI6InBlbnNpb25maSJ9.agI-2V-FeK_eVRAZ-T6KGGfE9ltWrTUQ7brFzzYVwdM";
+const APIKEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGE3RURENUVFNDdlNzExQjgzYjMzMDlFMzMyQ2I1Y0Y2NjlmRWZEQmIiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2MzQ5NzMxNjE5NSwibmFtZSI6IkF5dXNoIEd1cHRhIn0.MqVb5g7RCTAgqSCxCu9gZXAPVi4JJDD2uWdVTL-5oBs";
 
 const MintProfile = () => {
   const [errorMessage, setErrorMessage] = useState(null);
@@ -91,51 +91,73 @@ const MintProfile = () => {
 
   return (
     <>
-    <font color ='white'  face ="Verdana">
-      <div className="text-4xl text-left text-white font-bold mt-10 mb-20">
-        <h2> Profile Creation Page </h2>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-1/2 flex flex-col pb-12 ">
-          <input
-            placeholder="Profile username"
-            className="mt-8 border rounded p-1"
-            onChange={(e) => updateFormInput({ ...formInput, name: e.target.value })}
-          /><br  />
-          <input
-            placeholder="Description"
-            className="mt-8 border rounded p-1"
-            onChange={(e) => updateFormInput({ ...formInput, description: e.target.value })}
-          />
-          <br />
-
-          <div className="MintNFT">
-            <form>
-              <h4>Create your Profile NFT on Polygon Mumbai & Filecoin/IPFS</h4>
-              <br />
-              <input type="file" onChange={handleFileUpload} />
-              <br />
-            </form>
-            <br />
-            {txStatus && <p>{txStatus}</p>}
-            <br />
-            {imageView && <img className="NFTImg" src={imageView} alt="NFT preview" />}
-            <br />
-            {metaDataURL && <p><a href={metaDataURL}>Metadata on IPFS</a></p>}
-            <br />
-            {txURL && <p><a href={txURL}>See the mint transaction</a></p>}
-            <br />
-            {errorMessage}
+      <font align="center">
+        <font color="white" face="Verdana">
+          <div className="text-4xl text-left text-white font-bold mt-10 mb-20">
+            <h2> Profile Creation Page </h2>
           </div>
+          <div className="flex justify-center">
+            <div className="w-1/2 flex flex-col pb-12 ">
+              <input
+                placeholder="Profile username"
+                className="mt-8 border rounded p-1"
+                onChange={(e) =>
+                  updateFormInput({ ...formInput, name: e.target.value })
+                }
+              />
+              <br />
+              <input
+                placeholder="Description"
+                className="mt-8 border rounded p-1"
+                onChange={(e) =>
+                  updateFormInput({ ...formInput, description: e.target.value })
+                }
+              />
+              <br />
 
-          <button type="button" onClick={(e) => mintNFTToken(e, uploadedFile)} className="btn btn-outline-light">
-            Create Profile
-          </button>
-        </div>
-      </div>
+              <div className="MintNFT">
+                <form>
+                  <h4>
+                    Create your Profile NFT on Polygon Mumbai & Filecoin/IPFS
+                  </h4>
+                  <br />
+                  <input type="file" onChange={handleFileUpload} />
+                  <br />
+                </form>
+                <br />
+                {txStatus && <p>{txStatus}</p>}
+                <br />
+                {imageView && (
+                  <img className="NFTImg" src={imageView} alt="NFT preview" />
+                )}
+                <br />
+                {metaDataURL && (
+                  <p>
+                    <a href={metaDataURL}>Metadata on IPFS</a>
+                  </p>
+                )}
+                <br />
+                {txURL && (
+                  <p>
+                    <a href={txURL}>See the mint transaction</a>
+                  </p>
+                )}
+                <br />
+                {errorMessage}
+              </div>
+
+              <button
+                type="button"
+                onClick={(e) => mintNFTToken(e, uploadedFile)}
+                className="btn btn-outline-light"
+              >
+                Create Profile
+              </button>
+            </div>
+          </div>
+        </font>
       </font>
     </>
-
   );
 };
 export default MintProfile;

@@ -7,11 +7,12 @@ import {CreateFlow} from "./CreateFlow"
 
 export default function Admin (){
     return (
-    <>
+      <>
         <Navbar />
-        <CreateFlow/>
+        <CreateFlow />
         <MintNFT />
-        <Footer/>
-</>
-    )
+
+        <Footer />
+      </>
+    );
 }
