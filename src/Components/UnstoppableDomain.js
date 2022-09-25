@@ -37,7 +37,7 @@ function UnstoppableDomain() {
     return (
         <>
         <font color ='white' face ="Verdana">
-            <Button className="btn btn-outline-light text-white" onClick={log} >
+            <Button className="btn btn-outline-light" onClick={log} >
                 {Uauth != null ? Uauth["sub"] : "Login with Unstoppable"}
             </Button>
             </font>

@@ -63,62 +63,66 @@ export default function MintNFT() {
               })
       }
     return (
-        <div>
-        <div className ="col-5 justify-center items-center">
-        <div className="card" >
-        <div className="card text-white bg-dark mb-3">
-  <div className="card-body" >
-    
-
-       
-            <div className=" flex flex-col justify-center items-center">
-                <div className=" bg-green-100 rounded-3xl p-7 mt-6">
-                    <div className="flex justify-between">
+      <div class="mx-auto">
+        <font align="center">
+          <div className="col-5 justify-center items-center">
+            {/* <div className="card"> */}
+              {/* <div className="card text-white bg-dark mb-3"> */}
+                <div className="card-body">
+                  <div className=" flex flex-col justify-center items-center">
+                    <div className=" bg-green-100 rounded-3xl p-7 mt-6">
+                      <div className="flex justify-between">
                         <div className="flex flex-col items-center">
-                            <div className="flex flex-col items-center">
-                                <div className="font-bold text-2xl">
-                                <font color ='white' size="4" face ="Verdana">   Mint Pension Approval NFTs</font>
-                                </div>
-                                <div className="flex flex-col mt-8">
-                                    <input
-                                        type="text"
-                                        placeholder="UserName"
-                                        className="border-[#334155] border bg-green-50 rounded-lg text-black py-2 px-10 w-[400px] mb-5"
-                                        onChange={handleInputChange}
-                                    />
-                                    <input
-                                        type="text"
-                                        placeholder="Description"
-                                        className="border-[#334155] border bg-green-50 rounded-lg text-black py-2 px-10 w-[400px]"
-                                        onChange={handleValueChange}
-                                    />
-                                </div>
-                                <form>
-                                    <input
-                                        type="file"
-                                        className="border-[#334155] border bg-green-50 rounded-lg text-black py-2 px-10 w-[400px] mt-5"
-                                        id="myFile"
-                                        name="filename"
-                                        ref={inputRef}
-                                    />
-                                </form>
+                          <div className="flex flex-col items-center">
+                            <div className="font-bold text-2xl">
+                              <font color="white" size="4" face="Verdana">
+                                {" "}
+                                Mint Pension Approval NFTs
+                              </font>
                             </div>
-                            <div className="flex mt-10 mb-10 space-x-4">
-                                <button
-                                    className="btn btn-outline-light"
-                                    onClick={onSubmit}
-                                ><font color ='Black' size="3">
-                                    MINT NFT</font>
-                                </button>
+                            <div className="flex flex-col mt-8">
+                              <input
+                                type="text"
+                                placeholder="UserName"
+                                className="border-[#334155] border bg-green-50 rounded-lg text-black py-2 px-10 w-[400px] mb-5"
+                                onChange={handleInputChange}
+                              />
+                              <input
+                                type="text"
+                                placeholder="Description"
+                                className="border-[#334155] border bg-green-50 rounded-lg text-black py-2 px-10 w-[400px]"
+                                onChange={handleValueChange}
+                              />
                             </div>
+                            <form>
+                              <input
+                                type="file"
+                                className=" bg-green-50 rounded-lg text-black py-2 px-10 w-[400px] mt-5"
+                                id="myFile"
+                                name="filename"
+                                ref={inputRef}
+                              />
+                            </form>
+                          </div>
+                          <div className="flex mt-10 mb-10 space-x-4">
+                            <button
+                              className="btn btn-outline-light"
+                              onClick={onSubmit}
+                            >
+                              <font  size="3">
+                                MINT NFT
+                              </font>
+                            </button>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-    )
+              {/* </div> */}
+            {/* </div> */}
+          </div>
+        </font>
+      </div>
+    );
 }
