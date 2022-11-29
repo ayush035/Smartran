@@ -1,4 +1,4 @@
-## Integrating “Login With Unstoppable” 
+
 ### Project Name - Smartran
 ### PR link to the public repo - https://github.com/ayush035/Smartran
 ### Recorded Video Demo of the integration - https://youtu.be/5g0Sn70ovng
